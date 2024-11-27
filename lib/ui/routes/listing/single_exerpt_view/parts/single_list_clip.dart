@@ -15,10 +15,17 @@ class SingleListChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Chip(
-      label: Text(
-        text,
-        style: TextStyle(
-          color: textColor,
+      label: SizedBox(
+        width: 30,
+        height: 25,
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: textColor,
+              fontSize: 16,
+            ),
+          ),
         ),
       ),
       backgroundColor: backgroundColor,

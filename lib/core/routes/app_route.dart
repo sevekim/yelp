@@ -10,7 +10,6 @@ class AppRouterNotifier extends Notifier<GoRouter> {
       initialLocation: '/',
       debugLogDiagnostics: false,
       routes: [
-        //Home and Single Listing View
         GoRoute(
           path: '/',
           name: AppRouteEnum.homeScreenRoute.name,

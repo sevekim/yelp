@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yelp/core/constants/app_constant/site_constants.dart';
 import 'package:yelp/logic/service/yelp/yelp_service.dart';
 
 class ListViewController extends AsyncNotifier<List<dynamic>> {
@@ -19,18 +20,32 @@ class ListViewController extends AsyncNotifier<List<dynamic>> {
   /// **********************************************************************/
 
   Future<List<dynamic>> getListingExertps({
-    String? location = "calgary",
+    String? location,
     int? offset,
   }) async {
     Response listingData =
         await ref.read(yelpServicesProvider.notifier).getListingExertpsService(
-              location: location,
+              location: location ?? defaultCity,
               offset: offset,
             );
 
     List<dynamic> listingList = listingData.data["businesses"] ?? [];
 
     return listingList;
+  }
+
+  /// **********************************************************************
+  ///
+  /// Get the initial exerpts
+  ///
+  /// **********************************************************************/
+
+  Future<void> refreshListingFetch() async {
+    state = const AsyncLoading();
+
+    state = await AsyncValue.guard(
+      () => getListingExertps(),
+    );
   }
 }
 

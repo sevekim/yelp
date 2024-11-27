@@ -36,19 +36,19 @@ class ListViewBuilderController
   Future<void> checkOnScrollInList({
     required ScrollNotification scrollInfo,
   }) async {
-    // if (isFetching ||
-    //     !hasMoreListings ||
-    //     listingCountsWhileInFetch == state.length) return;
+    if (isFetching ||
+        !hasMoreListings ||
+        listingCountsWhileInFetch == state.length) return;
 
-    // const double scrollThreshold = 2500.0;
-    // final maxScroll = scrollInfo.metrics.maxScrollExtent;
-    // final currentScroll = scrollInfo.metrics.pixels;
+    const double scrollThreshold = 2500.0;
+    final maxScroll = scrollInfo.metrics.maxScrollExtent;
+    final currentScroll = scrollInfo.metrics.pixels;
 
-    // //Determine the scroll position
-    // if (maxScroll - currentScroll <= scrollThreshold) {
-    //   isFetching = true;
-    //   await triggerMoreListingFetch();
-    // }
+    //Determine the scroll position
+    if (maxScroll - currentScroll <= scrollThreshold) {
+      isFetching = true;
+      await triggerMoreListingFetch();
+    }
   }
 
   /// **********************************************************************

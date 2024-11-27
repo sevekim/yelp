@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yelp/core/constants/style/padding_style/left_top_right_paddings.dart';
+import 'package:yelp/core/constants/style/padding_style/left_bottom_right_paddings.dart';
 import 'package:yelp/logic/controller/yelp/list_view_builder_controller.dart';
 import 'package:yelp/ui/routes/listing/list_view_builder_content.dart';
 
@@ -35,7 +35,7 @@ class ListingViewBuilder extends ConsumerWidget {
         return false;
       },
       child: Container(
-        padding: commonLTRPadding16,
+        padding: commonLR16B8,
         child: ListViewListBuilderContent(
           listingList: listingList,
           initialIndicatorStatus: initialIndicatorStatus,

@@ -18,7 +18,7 @@ class HomeScreenListingView extends ConsumerWidget {
 
     return RefreshIndicator(
       onRefresh: () async {
-        ref.read(listViewControllerProvider.notifier).getListingExertps();
+        ref.read(listViewControllerProvider.notifier).refreshListingFetch();
       },
       child: Container(
         child: provider.when(
