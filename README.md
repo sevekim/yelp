@@ -5,7 +5,7 @@ ___
 
 ## Initial Features ##
 
-1. Shows the list of restaurants in Calgary
+Shows the list of restaurants in Calgary
 ___
 
 # Screenshots:
