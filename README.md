@@ -12,6 +12,6 @@ ___
 # Screenshots:
 
 <p float="left">
-![image description](images/Screenshot 2024-11-26 233335.png)
+![image description](images/readme_image.png)
 </p>
 
