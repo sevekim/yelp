@@ -1,9 +1,7 @@
 import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:yelp/core/constants/app_constant/api_constants.dart';
 import 'package:yelp/core/constants/app_constant/site_constants.dart';
-
 import 'api_switcher.dart';
 
 class DioSetting {
