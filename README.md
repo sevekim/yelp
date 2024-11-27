@@ -6,7 +6,6 @@ ___
 ## Initial Features ##
 
 1. Shows the list of restaurants in Calgary
-2. Shows individual rocket/launch pad data
 ___
 
 # Screenshots:
