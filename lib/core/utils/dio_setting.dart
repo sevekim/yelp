@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:yelp/core/constants/app_constant/api_constants.dart';
+import 'package:yelp/core/constants/app_constant/site_constants.dart';
 
 import 'api_switcher.dart';
 
@@ -34,8 +35,7 @@ class DioSetting {
     return Options(
       headers: {
         HttpHeaders.acceptHeader: 'application/json',
-        HttpHeaders.authorizationHeader:
-            'Bearer cA6AsgYtTp96t-3XEF5VXQyHGF_GOY9hgl_XqXvtUHPkHkIL5hlXQ3sUyhb4A5uNu2rjNmK-iOXvjWsYVfIfmerXhO8OY7qx9pQmm7CByEyd5ea8lZl_9XDv5kVGZ3Yx',
+        HttpHeaders.authorizationHeader: 'Bearer $apiKey',
       },
     );
   }
